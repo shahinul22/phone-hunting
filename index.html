@@ -5,59 +5,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hunting Phone API</title>
-    <!-- tailwind -->
+    <!-- Tailwind and DaisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-
 </head>
 
 <body>
+    <!-- Header Section -->
     <header>
-
+        <!-- Content for header can be added here -->
     </header>
+
+    <!-- Main Content -->
     <main class="container mx-auto">
-        <section class="bg-gray-100 p-4 ">
+        <!-- Search Section -->
+        <section class="bg-gray-100 p-4">
             <input id="Search-field" type="text" placeholder="Search..." class="input input-bordered w-full max-w-xs" />
-            <button onclick="handleSearch()" class="btn btn-ghost">Search </button>
+            <button onclick="handleSearch()" class="btn btn-ghost">Search</button>
         </section>
-        <!-- show result  -->
+
+        <!-- Results Section -->
         <section class="mt-5">
-            <!-- <div id="phone-container ">
-                
-            </div> -->
-            <!-- loading spinner -->
-            <div id="loading-spinner" class="container  text-center  mt-40 hidden ">
+            <!-- Loading Spinner -->
+            <div id="loading-spinner" class="container text-center mt-40 hidden">
                 <span class="loading loading-spinner loading-lg"></span>
             </div>
+
+            <!-- Phone Container -->
             <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 space-y-4"></div>
+
+            <!-- Show All Button -->
             <div id="show-all-container" class="text-center m-8 space-y-8 hidden">
                 <button onclick="handleShowAll()" class="btn btn-accent">Show All</button>
             </div>
-
         </section>
 
-        <!-- show modal  -->
-        <!-- Open the modal using ID.showModal() method -->
-        <!-- <button class="btn" onclick="show_details_modal.showModal()">open modal</button> -->
+        <!-- Modal Section -->
         <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
             <div class="modal-box">
-              <div id="spinner" class="flex justify-center items-center h-20 hidden">
-                <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-500"></div>
-              </div>
-              <div id="modal-container" class="modal-content p-4 hidden"></div>
-              <div class="modal-action">
-                <form method="dialog">
-                  <button class="btn">Close</button>
-                </form>
-              </div>
+                <!-- Spinner for Loading in Modal -->
+                <div id="spinner" class="flex justify-center items-center h-20 hidden">
+                    <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-500"></div>
+                </div>
+                
+                <!-- Modal Content -->
+                <div id="modal-container" class="modal-content p-4 hidden"></div>
+                
+                <!-- Modal Action -->
+                <div class="modal-action">
+                    <form method="dialog">
+                        <button class="btn">Close</button>
+                    </form>
+                </div>
             </div>
-          </dialog>
-          
-          
+        </dialog>
     </main>
-    <footer>
 
+    <!-- Footer Section -->
+    <footer>
+        <!-- Content for footer can be added here -->
     </footer>
+
+    <!-- External JavaScript -->
     <script src="js/phone.js"></script>
 </body>
 
